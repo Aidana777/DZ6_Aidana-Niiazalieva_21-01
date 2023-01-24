@@ -1,27 +1,29 @@
-function rev() {
-    let str = document.getElementById('text').value;
-    let strrev = '';
+const text = document.getElementById('text')
+const reverse = document.querySelector('.reverse')
 
-    for (let i = str.length - 1; i >= 0; i--) {
-        strrev = strrev + str[i]
+text.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+        let arr = []
+        const rev = text.value.split('').reverse().join('')
+        arr.push(rev)
+        arr.forEach((item) => {
+            const div = document.createElement('div')
+            const button = document.createElement('button')
+            button.setAttribute('class', 'btn')
+            button.innerHTML = 'delete'
+
+            button.onclick = () => {
+                div.remove()
+            }
+            div.innerHTML = item
+            div.append(button)
+            reverse.append(div)
+            text.value = ""
+
+
+        })
+
     }
-    document.getElementById('innerText').innerHTML = '' + strrev;
-}
 
-
-const input = document.querySelector('#input')
-const addBtn = document.querySelector('#add')
-const newList = document.querySelector('#list')
-
-const create = () => {
-    var fruits = ['Яблоко', 'Банан'];
-fruits.forEach((el)=>{
-
-    const divTag = document.createElement('div')
-    const textH3 = document.createElement('h3')
-    textH3.innerText = input.value
-    divTag.append(textH3)
-    newList.append(divTag)
 })
-}
-addBtn.addEventListener('click', create)
+

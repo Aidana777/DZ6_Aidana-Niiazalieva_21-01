@@ -1,11 +1,59 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 
 
-    body {
-        background-color: silver;
-        padding: 20px;
-     }
+body {
+   background-color: silver;
+   padding: 20px;
+}
+
+
+#text {
+   margin: 0 auto;
+   width: 500px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   background-color: beige;
+}
+
+.reverse {
+   text-align: center;
+   padding-top: 10px;
+   font-family: sans-serif;
+   font-size: 18px;
+   justify-content: center;
+
+}
+
+.todo {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 750px;
+   margin: 0 auto;
+
+}
+
+#input {
+   border: 2px solid teal;
+   font-size: 20px;
+   height: 40px;
+   width: 500px;
+   padding-left: 5px;
+
+}
+
+.btn {
+   margin-left: 10px;
+   width: 100px;
+   height: 30px;
+   background-color: black;
+   color: white;
+   border-radius: 50px;
+   margin-top: 15px;
+
+}
